@@ -1,4 +1,4 @@
-module github.com/GiGInnovationLabs/traefikgeoip2
+module github.com/matz9/traefikgeoip2
 
 go 1.19
 
