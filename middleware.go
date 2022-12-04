@@ -3,6 +3,7 @@ package traefikgeoip2
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"net"
 	"net/http"
@@ -101,6 +102,8 @@ func (mw *TraefikGeoIP2) ServeHTTP(reqWr http.ResponseWriter, req *http.Request)
 	req.Header.Set(CountryHeader, res.country)
 	req.Header.Set(RegionHeader, res.region)
 	req.Header.Set(CityHeader, res.city)
+	req.Header.Set(LatitudeHeader, fmt.Sprintf("%f", res.latitude))
+	req.Header.Set(LongitudeHeader, fmt.Sprintf("%f", res.longitude))
 
 	mw.next.ServeHTTP(reqWr, req)
 }
