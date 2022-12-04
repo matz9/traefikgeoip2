@@ -20,9 +20,10 @@ const (
 	RegionHeader = "X-GeoIP2-Region"
 	// CityHeader city header name.
 	CityHeader = "X-GeoIP2-City"
-
+	// LongitudeHeader longitude position of request
 	LongitudeHeader = "X-GeoIP2-Long"
-	LatitudeHeader  = "X-GeoIP2-Lat"
+	// LatitudeHeader Latitude position of request
+	LatitudeHeader = "X-GeoIP2-Lat"
 )
 
 // GeoIPResult GeoIPResult.
